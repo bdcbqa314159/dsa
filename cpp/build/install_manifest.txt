@@ -1,0 +1,5 @@
+/usr/local/lib/libdsa.dylib
+/usr/local/include/dsa
+/usr/local/include/dsa_bits/.DS_Store
+/usr/local/include/dsa_bits/test.hpp
+/usr/local/include/dsa_bits/week1.hpp
