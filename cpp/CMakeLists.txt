@@ -20,9 +20,11 @@ set(PROJECT_INCLUDE_DIR "include/dsa_bits")
 set(SOURCE_FILES
     ${PROJECT_INCLUDE_DIR}/test.hpp
     ${PROJECT_INCLUDE_DIR}/week1.hpp
+    ${PROJECT_INCLUDE_DIR}/week2.hpp
     
     ${PROJECT_SOURCE_DIR}/test.cpp
     ${PROJECT_SOURCE_DIR}/week1.cpp
+    ${PROJECT_SOURCE_DIR}/week2.cpp
 )
 
 # Set up such that XCode organizes the files correctly

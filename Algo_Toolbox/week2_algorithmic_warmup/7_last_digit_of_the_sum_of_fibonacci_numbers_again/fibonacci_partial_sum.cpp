@@ -1,15 +1,18 @@
 #include <iostream>
 #include <vector>
-using std::vector;
+#include <cmath>
 
-long long get_fibonacci_partial_sum_naive(long long from, long long to) {
+long long get_fibonacci_partial_sum_naive(long long from, long long to)
+{
     long long sum = 0;
 
     long long current = 0;
-    long long next  = 1;
+    long long next = 1;
 
-    for (long long i = 0; i <= to; ++i) {
-        if (i >= from) {
+    for (long long i = 0; i <= to; ++i)
+    {
+        if (i >= from)
+        {
             sum += current;
         }
 
@@ -21,8 +24,102 @@ long long get_fibonacci_partial_sum_naive(long long from, long long to) {
     return sum % 10;
 }
 
-int main() {
+std::vector<int> cycle10()
+{
+
+    int previous = 0;
+    int current = 1;
+    std::vector<int> v{};
+    v.push_back(0);
+    v.push_back(1);
+
+    while (true)
+    {
+        int tmp_previous = previous;
+        previous = current;
+        current = (tmp_previous + current) % 10;
+
+        if (v[v.size() - 1] == 0 && current == 1)
+            break;
+        else
+            v.push_back(current);
+    }
+    v.pop_back();
+
+    return v;
+}
+
+long long get_fibonacci_huge_fast(long long n, long long m)
+{
+    if (n <= 1)
+        return n;
+
+    long long previous = 0;
+    long long current = 1;
+    std::vector<int> v{};
+    v.push_back(0);
+    v.push_back(1);
+
+    while (true)
+    {
+        long long tmp_previous = previous;
+        previous = current;
+        current = (tmp_previous + current) % m;
+
+        if (v[v.size() - 1] == 0 && current == 1)
+            break;
+        else
+            v.push_back(current);
+    }
+    v.pop_back();
+    return (long long)v[n % (v.size())];
+}
+
+long long fibonacci_sum_fast1(long long n)
+{
+    std::vector<int> v = cycle10();
+
+    int period = v.size();
+
+    if (n <= 0)
+        return 0;
+    if (n == 1)
+        return 1;
+
+    n %= period;
+
+    if (n == 0)
+        return 0;
+
+    int prev = 0;
+    int cur = 1;
+
+    for (int i = 2; i <= n + 2; i++)
+    {
+        int temp = (cur + prev) % period;
+        prev = cur;
+        cur = temp;
+    }
+
+    return (cur - 1);
+}
+
+long long get_fibonacci_partial_sum_fast(long long from, long long to)
+{
+    if (from == to)
+        return get_fibonacci_huge_fast(from, 10);
+
+    long long answer = fibonacci_sum_fast1(to) - fibonacci_sum_fast1(from - 1);
+
+    if (answer < 0)
+        return (10 + answer % 10) % 10;
+    else
+        return answer % 10;
+}
+
+int main()
+{
     long long from, to;
     std::cin >> from >> to;
-    std::cout << get_fibonacci_partial_sum_naive(from, to) << '\n';
+    std::cout << get_fibonacci_partial_sum_fast(from, to) << '\n';
 }
