@@ -11,6 +11,7 @@ set(CMAKE_DEPENDS_DEPENDENCY_FILES
   "/Users/bernardocohen/repos/dsa/cpp/src/test.cpp" "CMakeFiles/dsa.dir/src/test.cpp.o" "gcc" "CMakeFiles/dsa.dir/src/test.cpp.o.d"
   "/Users/bernardocohen/repos/dsa/cpp/src/week1.cpp" "CMakeFiles/dsa.dir/src/week1.cpp.o" "gcc" "CMakeFiles/dsa.dir/src/week1.cpp.o.d"
   "/Users/bernardocohen/repos/dsa/cpp/src/week2.cpp" "CMakeFiles/dsa.dir/src/week2.cpp.o" "gcc" "CMakeFiles/dsa.dir/src/week2.cpp.o.d"
+  "/Users/bernardocohen/repos/dsa/cpp/src/week3.cpp" "CMakeFiles/dsa.dir/src/week3.cpp.o" "gcc" "CMakeFiles/dsa.dir/src/week3.cpp.o.d"
   )
 
 # Targets to which this target links.

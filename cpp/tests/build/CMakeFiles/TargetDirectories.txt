@@ -1,3 +1,4 @@
 /Users/bernardocohen/repos/dsa/cpp/tests/build/CMakeFiles/test.dir
+/Users/bernardocohen/repos/dsa/cpp/tests/build/CMakeFiles/week3.dir
 /Users/bernardocohen/repos/dsa/cpp/tests/build/CMakeFiles/edit_cache.dir
 /Users/bernardocohen/repos/dsa/cpp/tests/build/CMakeFiles/rebuild_cache.dir

@@ -1,6 +1,8 @@
 #include <dsa>
 #include <iostream>
 #include <string>
+#include <algorithm>
+#include <sstream>
 
 void messageTester()
 {
@@ -76,6 +78,47 @@ void sumFibSqTester()
     long long n = 0;
     std::cin >> n;
     std::cout << fibonacci_sum_squares_fast(n);
+    // std::cout << get_change(n);
+}
+
+int myCompare(std::string X, std::string Y)
+{
+    // first append Y at the end of X
+    std::string XY = X.append(Y);
+
+    // then append X at the end of Y
+    std::string YX = Y.append(X);
+
+    // Now see which of the two
+    // formed numbers is greater
+    return XY.compare(YX) > 0 ? 1 : 0;
+}
+
+std::string printLargest(std::vector<std::string> arr)
+{
+
+    std::sort(arr.begin(), arr.end(), myCompare);
+    std::stringstream ret;
+    for (int i = 0; i < arr.size(); i++)
+        ret << arr[i];
+    std::string result;
+    ret >> result;
+    return result;
+}
+
+// Driver Code
+void testingLargest()
+{
+    std::vector<std::string> arr;
+    arr.push_back("57");
+    arr.push_back("52");
+    arr.push_back("581");
+    arr.push_back("569");
+    arr.push_back("532");
+    arr.push_back("517");
+    arr.push_back("5");
+
+    std::cout << printLargest(arr);
 }
 
 int main()
@@ -87,8 +130,9 @@ int main()
     // lcmTester();
     // getFibHugeTester();
     // hugeSumFibTester();
-    partialSumFibTester();
+    // partialSumFibTester();
     // sumFibSqTester();
+    testingLargest();
 
     return 0;
 }

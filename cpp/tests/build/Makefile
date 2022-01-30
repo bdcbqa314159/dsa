@@ -129,6 +129,19 @@ test/fast:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/test.dir/build.make CMakeFiles/test.dir/build
 .PHONY : test/fast
 
+#=============================================================================
+# Target rules for targets named week3
+
+# Build rule for target.
+week3: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 week3
+.PHONY : week3
+
+# fast build rule for target.
+week3/fast:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/week3.dir/build.make CMakeFiles/week3.dir/build
+.PHONY : week3/fast
+
 src/test.o: src/test.cpp.o
 .PHONY : src/test.o
 
@@ -153,6 +166,30 @@ src/test.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/test.dir/build.make CMakeFiles/test.dir/src/test.cpp.s
 .PHONY : src/test.cpp.s
 
+src/week3.o: src/week3.cpp.o
+.PHONY : src/week3.o
+
+# target to build an object file
+src/week3.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/week3.dir/build.make CMakeFiles/week3.dir/src/week3.cpp.o
+.PHONY : src/week3.cpp.o
+
+src/week3.i: src/week3.cpp.i
+.PHONY : src/week3.i
+
+# target to preprocess a source file
+src/week3.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/week3.dir/build.make CMakeFiles/week3.dir/src/week3.cpp.i
+.PHONY : src/week3.cpp.i
+
+src/week3.s: src/week3.cpp.s
+.PHONY : src/week3.s
+
+# target to generate assembly for a file
+src/week3.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/week3.dir/build.make CMakeFiles/week3.dir/src/week3.cpp.s
+.PHONY : src/week3.cpp.s
+
 # Help Target
 help:
 	@echo "The following are some of the valid targets for this Makefile:"
@@ -162,9 +199,13 @@ help:
 	@echo "... edit_cache"
 	@echo "... rebuild_cache"
 	@echo "... test"
+	@echo "... week3"
 	@echo "... src/test.o"
 	@echo "... src/test.i"
 	@echo "... src/test.s"
+	@echo "... src/week3.o"
+	@echo "... src/week3.i"
+	@echo "... src/week3.s"
 .PHONY : help
 
 

@@ -4,5 +4,6 @@
 #include "dsa_bits/test.hpp"
 #include "dsa_bits/week1.hpp"
 #include "dsa_bits/week2.hpp"
+#include "dsa_bits/week3.hpp"
 
 #endif

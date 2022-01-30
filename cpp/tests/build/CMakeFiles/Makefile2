@@ -64,6 +64,7 @@ CMAKE_BINARY_DIR = /Users/bernardocohen/repos/dsa/cpp/tests/build
 
 # The main recursive "all" target.
 all: CMakeFiles/test.dir/all
+all: CMakeFiles/week3.dir/all
 .PHONY : all
 
 # The main recursive "preinstall" target.
@@ -72,6 +73,7 @@ preinstall:
 
 # The main recursive "clean" target.
 clean: CMakeFiles/test.dir/clean
+clean: CMakeFiles/week3.dir/clean
 .PHONY : clean
 
 #=============================================================================
@@ -99,6 +101,32 @@ test: CMakeFiles/test.dir/rule
 CMakeFiles/test.dir/clean:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/test.dir/build.make CMakeFiles/test.dir/clean
 .PHONY : CMakeFiles/test.dir/clean
+
+#=============================================================================
+# Target rules for target CMakeFiles/week3.dir
+
+# All Build rule for target.
+CMakeFiles/week3.dir/all:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/week3.dir/build.make CMakeFiles/week3.dir/depend
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/week3.dir/build.make CMakeFiles/week3.dir/build
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/Users/bernardocohen/repos/dsa/cpp/tests/build/CMakeFiles --progress-num=3,4 "Built target week3"
+.PHONY : CMakeFiles/week3.dir/all
+
+# Build rule for subdir invocation for target.
+CMakeFiles/week3.dir/rule: cmake_check_build_system
+	$(CMAKE_COMMAND) -E cmake_progress_start /Users/bernardocohen/repos/dsa/cpp/tests/build/CMakeFiles 2
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 CMakeFiles/week3.dir/all
+	$(CMAKE_COMMAND) -E cmake_progress_start /Users/bernardocohen/repos/dsa/cpp/tests/build/CMakeFiles 0
+.PHONY : CMakeFiles/week3.dir/rule
+
+# Convenience name for target.
+week3: CMakeFiles/week3.dir/rule
+.PHONY : week3
+
+# clean rule for target.
+CMakeFiles/week3.dir/clean:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/week3.dir/build.make CMakeFiles/week3.dir/clean
+.PHONY : CMakeFiles/week3.dir/clean
 
 #=============================================================================
 # Special targets to cleanup operation of make.

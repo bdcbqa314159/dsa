@@ -15,5 +15,7 @@ set(CMAKE_RUNTIME_OUTPUT_DIRECTORY_DEBUG ${CMAKE_BINARY_DIR}/../bin)
 find_library(DSA_LIB dsa HINTS /usr/local/lib/)
 
 add_executable(test src/test.cpp)
+add_executable(week3 src/week3.cpp)
 
 target_link_libraries(test PUBLIC ${DSA_LIB})
+target_link_libraries(week3 PUBLIC ${DSA_LIB})

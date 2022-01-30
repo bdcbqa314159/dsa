@@ -246,6 +246,30 @@ src/week2.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/dsa.dir/build.make CMakeFiles/dsa.dir/src/week2.cpp.s
 .PHONY : src/week2.cpp.s
 
+src/week3.o: src/week3.cpp.o
+.PHONY : src/week3.o
+
+# target to build an object file
+src/week3.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/dsa.dir/build.make CMakeFiles/dsa.dir/src/week3.cpp.o
+.PHONY : src/week3.cpp.o
+
+src/week3.i: src/week3.cpp.i
+.PHONY : src/week3.i
+
+# target to preprocess a source file
+src/week3.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/dsa.dir/build.make CMakeFiles/dsa.dir/src/week3.cpp.i
+.PHONY : src/week3.cpp.i
+
+src/week3.s: src/week3.cpp.s
+.PHONY : src/week3.s
+
+# target to generate assembly for a file
+src/week3.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/dsa.dir/build.make CMakeFiles/dsa.dir/src/week3.cpp.s
+.PHONY : src/week3.cpp.s
+
 # Help Target
 help:
 	@echo "The following are some of the valid targets for this Makefile:"
@@ -268,6 +292,9 @@ help:
 	@echo "... src/week2.o"
 	@echo "... src/week2.i"
 	@echo "... src/week2.s"
+	@echo "... src/week3.o"
+	@echo "... src/week3.i"
+	@echo "... src/week3.s"
 .PHONY : help
 
 
